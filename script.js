@@ -11,10 +11,11 @@ const fetchBooks = () => {
 
       booksArray.forEach(book => {
         const col = document.createElement("div");
-        col.classList.add("col-sm-6", "col-md-4", "col-xl-3", "card");
+        col.classList.add("col-sm-6", "col-md-4", "col-xl-3", "card", "text-truncate");
 
         const img = document.createElement("img");
-        img.style.height = "500px";
+        // img.style.height = "500px";
+        img.style.aspectRatio = "2/3";
         img.src = book.img;
         img.classList.add("card-img-top", "object-fit-cover");
         img.alt = book.asin;
